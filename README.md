@@ -4,7 +4,7 @@
 
 Instant-runoff voting application
 
-A way for you to streamline those demographic elections.
+A way for you to streamline those democratic elections.
 
 ## Download
 
