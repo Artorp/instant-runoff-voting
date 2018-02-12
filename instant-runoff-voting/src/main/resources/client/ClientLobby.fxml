@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox spacing="5.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox>
+         <children>
+            <Label text="Connected to..." />
+            <Label fx:id="labelServerName" text="SERVER_NAME">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox spacing="5.0">
+         <children>
+            <Label text="Secret name:" />
+            <Label fx:id="labelSecretName" text="HOVER_TO_SHOW" />
+         </children>
+      </HBox>
+      <Label text="Order your candidates by preference." />
+      <Label text="Higher is better." />
+      <ListView fx:id="listviewCandidates" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+      <Button fx:id="buttonShowHideNames" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Show / hide candidate names" />
+      <Label text="Status:" />
+      <TextFlow prefHeight="40.0" prefWidth="300.0">
+         <children>
+            <Text fx:id="textStatus" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="STATUS_TEXT" />
+         </children></TextFlow>
+      <Button fx:id="buttonSendRank" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Submit candidates" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
