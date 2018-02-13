@@ -95,7 +95,7 @@ public class VotingSimulator {
 				// Check if loser requires tiebreaker
 				if (losers.size() > 1) {
 					Random r = new Random();
-					loser = losers.get(r.nextInt(losers.size() - 1));
+					loser = losers.get(r.nextInt(losers.size()));
 					sb.append(String.format("Tiebreaker: %s was randomly selected as the loser of the round.\n", loser.getName()));
 				} else {
 					loser = losers.get(0);
