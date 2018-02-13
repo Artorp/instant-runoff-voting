@@ -290,6 +290,10 @@ public class HostLobbyController {
 		
 		buttonBeginVoting.setOnAction(ae -> {
 			// Collect ballots
+			if (clients.size() == 0) {
+				Alerter.showAlertError("No clients connected!");
+				return;
+			}
 			List<String> candidateNames = new ArrayList<>(candidates);
 			List<List<String>> ballots = new ArrayList<>();
 			Set<String> ourCandidates = new HashSet<>(candidateNames);
@@ -312,6 +316,10 @@ public class HostLobbyController {
 					// Tell client we started voting but they didn't participate
 					oc.sendVoteStartNoBallotCollected();
 				}
+			}
+			if (ballots.size() == 0) {
+				Alerter.showAlertError("No ballots collected.");
+				return;
 			}
 			// This is it. Begin voting.
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(ResourceLocations.FXML_RESULTS));
